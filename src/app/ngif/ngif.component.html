@@ -1,0 +1,81 @@
+<div class="container">
+  <h1>ngif Examples</h1>
+
+
+  <b>ngIf - Avoiding "Cannot read property of undefined" errors</b>
+  <p *ngIf="user">
+    {{user.name}}
+  </p>
+
+  <!-- ngIf - Logical NOT (!) example -->
+  <b>Ejemplo con NOT (!)</b>
+  <p *ngIf="!show">
+    Esto solo se muestra si show es false
+  </p><br>
+
+  <!-- ngIf - Logical AND (&&) example -->
+  <b>Ejemplo de operador logico and (&&)</b>
+  <p *ngIf="a && b">
+    Esto se muesta si a y b son true
+  </p><br>
+  <!-- ngIf - Logical OR (||) example -->
+  <b>Ejemplo de operador logico or (||)</b>
+  <p *ngIf="a || b">
+    Esto se muestra si a o b son true
+  </p><br>
+
+  <!--  ngIf - Working with "else" Examples -->
+  <b> Ejemplo con else</b>
+  <div *ngIf="show; else notShow">
+    <p>
+      Esto se muestra si show es true
+    </p>
+  </div>
+
+  <ng-template #notShow>
+    <p>
+      Esto se muestra si show es false
+    </p>
+  </ng-template>
+
+  <!-- NgIf with "then" example -->
+  <b>Ejemplo de ngIf con then</b>
+  <ng-template *ngIf="show;then showBlock; else notShowBlock">
+  </ng-template>
+
+  <ng-template #showBlock>
+    <p>
+      Show this only if "show" is true
+    </p>
+  </ng-template>
+
+  <ng-template #notShowBlock>
+    <p>
+      Show this only if "show" is not true
+    </p>
+  </ng-template>
+
+  <!-- ngIf and ngFor with Table example -->
+  <b>ngIf and ngFor with Table example</b>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th *ngIf="showActions">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.emailId}}</td>
+      <td *ngIf="showActions">
+        <button>Delete</button>
+        <button>Update</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
