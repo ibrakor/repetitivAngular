@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h3>Ejemplos con una tabla ngFor</h3>
+<table>
+  <thead>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let u of users">
+    <td>{{u.firstName}}</td>
+    <td>{{u.lastName}}</td>
+    <td>{{u.emailId}}</td>
+
+  </tr>
+</table>
+<h3>ngFor con ul</h3>
+<ul *ngFor="let u of users">
+  <li>{{u.firstName}}, {{u.lastName}}</li>
+</ul>
+<h3>ngFor con indices</h3>
+<ul *ngFor="let u of users; let i = index">
+  <li>{{i}} {{u.firstName}}, {{u.lastName}}</li>
+</ul>
+<
+<div *ngFor="let u of users;  let i = index; let f=first; let l=last;">
+  Nombre:{{u.firstName}}, {{u.lastName}}. Es el primer elemento?: {{f}}. Es el ultimo elemento?:{{l}}
+</div>
+<br>
+<div *ngFor="let u of users;   let e= even; let o=odd;">
+  Nombre: {{u.firstName}}, {{u.lastName}}. Es par?: {{e}}. Es impar?:{{o}}
+
+</div>
+
+</body>
+</html>
