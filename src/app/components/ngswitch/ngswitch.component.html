@@ -1,3 +1,4 @@
+<div>
 <h1>EJEMPLOS ngSwitch</h1>
 <!--Simple ngSwitchExample -->
 <b> Simple ngSwitch</b>
@@ -14,8 +15,12 @@
     <div *ngSwitchCase="'1'">{{number}}-IMPAR.</div>
     <div *ngSwitchDefault>Nothing Found.</div>
   </div>
-</div><br><!--ngSwitch and ngSwitchCase -enum example --><b> ngSwitch and ngSwitchCase -enum example</b>
-<div [ngSwitch]="day"><b *ngSwitchCase="'SUNDAY'"> SUNDAY</b><b *ngSwitchCase="'MONDAY'"> MONDAY</b><b
+</div>
+<br><!--ngSwitch and ngSwitchCase -enum example -->
+  <b> ngSwitch and ngSwitchCase -enum example</b>
+<div [ngSwitch]="day">
+  <b *ngSwitchCase="'SUNDAY'"> SUNDAY</b><b *ngSwitchCase="'MONDAY'"> MONDAY</b><b
   *ngSwitchCase="'TUESDAY'">TUESDAY</b><b *ngSwitchCase="'WEDNESDAY'">WEDNESDAY</b><b *ngSwitchCase="'THURSDAY'">THURSDAY</b><b
   *ngSwitchCase="'FRIDAY'">FRIDAY</b><b *ngSwitchCase="'SATURDAY'">SATURDAY</b><b *ngSwitchDefault>No Days</b>
+</div>
 </div>

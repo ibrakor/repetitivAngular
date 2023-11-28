@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import {NgifComponent} from "./components/ngif/ngif.component";
-import { NgforComponent } from './components/ngfor/ngfor.component';
 import { NgswitchComponent } from './components/ngswitch/ngswitch.component';
 
 
@@ -11,7 +10,6 @@ import { NgswitchComponent } from './components/ngswitch/ngswitch.component';
   declarations: [
     AppComponent,
     NgifComponent,
-    NgforComponent,
     NgswitchComponent
   ],
   imports: [
