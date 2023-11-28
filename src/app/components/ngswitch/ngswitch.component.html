@@ -1,0 +1,21 @@
+<h1>EJEMPLOS ngSwitch</h1>
+<!--Simple ngSwitchExample -->
+<b> Simple ngSwitch</b>
+<ul [ngSwitch]="user">
+  <li *ngSwitchCase="'Ramesh'">Hi Ramesh</li>
+  <li *ngSwitchCase="'Tony'">Hi Tony</li>
+  <li *ngSwitchCase="'Tom'">Hi Tom</li>
+  <li *ngSwitchDefault>No user found</li>
+</ul><!--ngSwitch and ngSwitchCase -even odd number example -->
+<b> ngSwitch y ngSwitchCase -Ejemplo números pares e impares</b>
+<div *ngFor="let number of numbers">
+  <div ngSwitch="{{number % 2}}">
+    <div *ngSwitchCase="'0'">{{number}}-PAR.</div>
+    <div *ngSwitchCase="'1'">{{number}}-IMPAR.</div>
+    <div *ngSwitchDefault>Nothing Found.</div>
+  </div>
+</div><br><!--ngSwitch and ngSwitchCase -enum example --><b> ngSwitch and ngSwitchCase -enum example</b>
+<div [ngSwitch]="day"><b *ngSwitchCase="'SUNDAY'"> SUNDAY</b><b *ngSwitchCase="'MONDAY'"> MONDAY</b><b
+  *ngSwitchCase="'TUESDAY'">TUESDAY</b><b *ngSwitchCase="'WEDNESDAY'">WEDNESDAY</b><b *ngSwitchCase="'THURSDAY'">THURSDAY</b><b
+  *ngSwitchCase="'FRIDAY'">FRIDAY</b><b *ngSwitchCase="'SATURDAY'">SATURDAY</b><b *ngSwitchDefault>No Days</b>
+</div>
